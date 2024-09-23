@@ -16,11 +16,11 @@
             position: relative;
             float: left;
             clear: both;
-            width: 100%;
+            width: 96%;
             height: auto;
             min-height: 70vh;
             margin: 0px;
-            padding: 0px 1%;
+            padding: 0px 2% 0px 2%;
             opacity: 0.01;
             z-index: 700;
         }
@@ -34,3 +34,43 @@
                 margin: 1vw 0px 0px 0px;
                 padding: 0px;
             }
+
+
+    .content_quote {
+        position: absolute;
+        margin: 2vh 2vw;
+        width: calc(100% - (48px + 4vw));
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 4px 4px 8px #AAA;
+        color: #3EB0FF;
+        text-shadow: 1px 1px 1px #000;
+        background-color: #FFF;
+        padding: 2vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-style: italic;
+    }
+
+        .client_quote {
+            position: relative;
+            top: 1vw;
+            left: 10px;
+            opacity: 0.01;
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+
+        .client_info {
+            position: relative;
+            float: left;
+            top: 2vw;
+            left: 10px;
+            opacity: 0.01;
+            width: 100%;
+            height: auto;
+            color: #FF8800;
+            text-shadow: 1px 1px 1px #000;
+            text-align: right;
+        }

@@ -8,6 +8,7 @@
     import { Elasticate } from './Elasticate.js';
     import { Router } from "./Router.js";
     import { Sprinkler } from "./Sprinkler.js";
+    import { Feedback } from "./Feedback.js";
 
     import { SprinklerConfig } from "./../config/SprinklerConfig.js";
 
@@ -16,6 +17,7 @@
 
         let __elasticate;
         let __router;
+        let __feedback;
 
         
 ///////////////////////////////////////////////////////////
@@ -56,6 +58,7 @@
 
                 __elasticate = Elasticate();
                 __router = Router();
+                __feedback = Feedback();
 
                 __start_sprinklers();
 

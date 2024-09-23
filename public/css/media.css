@@ -7,6 +7,7 @@
 
         header {
             align-items: flex-start;
+            padding: 0px 6%;
         }
 
         #header_title {
@@ -16,19 +17,46 @@
         nav div {
             position: absolute;
             display: block;
+            width: 88%;
+            left: 6%;
         }
 
         .nav_link {
             font-size: 14px;
             margin-left: 2%;
+            margin-right: 0;
+            padding: 0;
         }
 
         .contact_page {
+            padding: 0 6%;
             display: none;
         }
 
         .contact_header {
             display: block;
+            right: 6%;
+        }
+
+        .content_page {
+            padding: 2px 6% 0px 6%;
+            width: 88%;
+        }
+
+        .content_quote {
+            margin: 2vh 0px;
+            right: 6%;
+            width: 30%;
+            height: auto;
+            font-size: 12px;
+        }
+
+        footer div {
+            width: 46%;
+        }
+
+        footer div:nth-child(odd) {
+            margin-left: 4%;
         }
 
     }

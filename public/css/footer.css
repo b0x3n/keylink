@@ -25,4 +25,26 @@
             max-height: 20vh;
             z-index: 400;
             background-image: linear-gradient(to right, #003466, #006596, #003466);
+            padding: 0 2vw;
         }
+
+            footer div {
+                position: relative;
+                float: left;
+                top: 0px;
+                width: 50%;
+                height: 100%;
+                color: #FFF;
+                border: solid 1px #F00;
+                margin: 0px;
+            }
+
+            footer div:nth-child(even) {
+                text-align: right;
+            }
+
+                footer div p {
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                }
