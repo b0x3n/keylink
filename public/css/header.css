@@ -1,0 +1,109 @@
+/**********************************************************
+ *  public/css/header.css                                 *
+ **********************************************************
+ */
+
+    .pseudo_header {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 15vh;
+        z-index: 1;
+    }
+
+        header {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            min-height: 10vh;
+            max-height: 15vh;
+            z-index: 100;
+            background-image: linear-gradient(to right, #003466, #006596, #003466);
+            padding: 0px 1vw;
+        }
+
+            #header_title {
+                position: relative;
+                float: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: auto;
+                height: auto;
+                color: #FFF;
+                cursor: pointer;
+            }
+
+                .header_title_logo {
+                    position: relative;
+                    float: left;
+                    width: auto;
+                    height: auto;
+                    font-family: "Bebas Neue", sans-serif;
+                    line-height: 32px;
+                    font-size: 36px;
+                }
+
+                    #header_title_logo_left {
+                        position: relative;
+                        float: left;
+                        width: auto;
+                        height: auto;
+                    }
+
+                    #header_title_logo_right{
+                        position: relative;
+                        float: left;
+                        width: auto;
+                        height: auto;
+                    }
+
+                .header_title_tag {
+                    position: relative;
+                    float: left;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 16px;
+                    margin-top: -4px;
+                    line-height: 14px;
+                    font-size: 14px;
+                    font-family: "Inria Sans", sans-serif;
+                    font-weight: bold;
+                }
+
+            
+    .sprinkler_char {
+        position: relative;
+        float: left;
+        width: auto;
+        height: auto;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        text-shadow: -1px 1px 1px #000;
+    }
+            
+    .sprinkler_tag_char {
+        position: relative;
+        float: left;
+        width: auto;
+        height: auto;
+        text-shadow: -1px 1px 1px #000;
+    }
+
+    .contact_header {
+        position: absolute;
+        right: 1%;
+        height: 48px;
+        width: auto;
+        display: none;
+    }

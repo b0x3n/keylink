@@ -1,0 +1,34 @@
+/**********************************************************
+ *  public/css/media.css                                  *
+ **********************************************************
+ */
+
+    @media screen and (min-width: 840px) {
+
+        header {
+            align-items: flex-start;
+        }
+
+        #header_title {
+            width: auto;
+        }
+
+        nav div {
+            position: absolute;
+            display: block;
+        }
+
+        .nav_link {
+            font-size: 14px;
+            margin-left: 2%;
+        }
+
+        .contact_page {
+            display: none;
+        }
+
+        .contact_header {
+            display: block;
+        }
+
+    }

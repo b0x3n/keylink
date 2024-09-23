@@ -1,0 +1,65 @@
+/**********************************************************
+ *  public/css/icon.css                                   *
+ **********************************************************
+ */
+
+
+    .icon {
+        position: relative;
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin: 2px 4px 0px 2px;
+    }
+
+    .page_icon {
+        position: relative;
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin: 4px 4px 0px 4px;
+        padding: 0px;
+    }
+
+        .icon_background {
+            position: absolute;
+            left: 0px;
+            width: 40px;
+            height: 40px;
+            background-color: #FFF;
+            opacity: 0.01;
+            border-radius: 20px;
+            margin: 0px;
+            z-index: 900;
+        }
+
+        .icon_image {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 40px;
+            height: 40px;
+            background-color: none;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 0px;
+            z-index: 901;
+        }
+
+        #header_telephone {
+            background-image: url(/public/images/icons/phone.png);
+        }
+
+        #header_email {
+            background-image: url(/public/images/icons/email.png);
+        }
+
+        #page_telephone {
+            background-image: url(/public/images/icons/phone.png);
+        }
+
+        #page_email {
+            background-image: url(/public/images/icons/email.png);
+        }
