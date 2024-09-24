@@ -59,7 +59,7 @@
         {
             "name": "Paterson Arran",
             "website": "https://www.paterson-arran.com/lander",
-            "logo": "/public/images/clients/Patersons.jpg"
+            "logo": "/public/images/clients/patersons.jpg"
         },
         {
             "name": "Price Roofing",
