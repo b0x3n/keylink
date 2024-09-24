@@ -1,105 +1,111 @@
-{
-    "clients": [
+///////////////////////////////////////////////////////////
+//  public/data/ClientData.js                            //
+///////////////////////////////////////////////////////////
+//
+//
+//
+
+    export const ClientData = [
         {
             "name": "British Airways Maintenance Glasgow",
             "website": "https://www.britishairways.com/travel/home/public/en_gb/?countrycode=GB&eId=101001",
-            "logo": "https://b0x3n.github.io/public/images/clients/BAMG.jpg"
+            "logo": "/public/images/clients/BAMG.jpg"
         },
         {
             "name": "Cordale Housing",
             "website": "https://www.cordalehousing.org.uk/",
-            "logo": "https://b0x3n.github.io/public/images/clients/cordale.jpg"
+            "logo": "/public/images/clients/cordale.jpg"
         },
         {
             "name": "Devro",
             "website": "",
-            "logo": "https://b0x3n.github.io/public/images/clients/Devrologo.jpg"
+            "logo": "/public/images/clients/Devrologo.jpg"
         },
         {
             "name": "Giltech",
             "website": "https://www.giltech.biz/",
-            "logo": "https://b0x3n.github.io/public/images/clients/giltech.jpg"
+            "logo": "/public/images/clients/giltech.jpg"
         },
         {
             "name": "The Glasgow Academy",
             "website": "http://www.theglasgowacademy.org.uk/ntga/home/flash.htm",
-            "logo": "https://b0x3n.github.io/public/images/clients/glasgowacademy.jpg"
+            "logo": "/public/images/clients/glasgowacademy.jpg"
         },
         {
             "name": "ISO Design",
             "website": "https://isodesign.co.uk/",
-            "logo": "https://b0x3n.github.io/public/images/clients/ISO.jpg"
+            "logo": "/public/images/clients/ISO.jpg"
         },
         {
             "name": "Keihin Corp",
             "website": "http://www.keihin-corp.co.jp/english/",
-            "logo": "https://b0x3n.github.io/public/images/clients/kiehin.jpg"
+            "logo": "/public/images/clients/keihin.jpg"
         },
         {
             "name": "Link Technologies",
             "website": "https://shop.biosearchtech.com/link-technologies",
-            "logo": "https://b0x3n.github.io/public/images/clients/Linktech.jpg"
+            "logo": "/public/images/clients/Linktech.jpg"
         },
         {
             "name": "Momentum Scotland",
             "website": "http://ww25.momentumscotland.org/web/Home?subid1=20240923-1941-0003-89c2-57098137c68c",
-            "logo": "https://b0x3n.github.io/public/images/clients/momentum.jpg"
+            "logo": "/public/images/clients/momentumlogo.jpg"
         },
         {
             "name": "Pacific Building",
             "website": "https://www.pacificbuilding.co.uk/",
-            "logo": "https://b0x3n.github.io/public/images/clients/pacificbuilding.jpg"
+            "logo": "/public/images/clients/pacificbuilding.jpg"
         },
         {
             "name": "Paterson Arran",
             "website": "https://www.paterson-arran.com/lander",
-            "logo": "https://b0x3n.github.io/public/images/clientspPatersons.jpg"
+            "logo": "/public/images/clients/Patersons.jpg"
         },
         {
             "name": "Price Roofing",
             "website": "https://www.priceroof.co.uk/",
-            "logo": "https://b0x3n.github.io/public/images/priceroofing.jpg"
+            "logo": "/public/images/clients/priceroofing.jpg"
         },
         {
             "name": "Scottish Enterprise",
             "website": "https://www.scottish-enterprise.com/",
-            "logo": "https://b0x3n.github.io/public/images/scottishenterprise.jpg"
+            "logo": "/public/images/clients/scottishenterprise.jpg"
         },
         {
             "name": "Scottish Fine Soaps",
             "website": "https://www.scottishfinesoaps.com/",
-            "logo": "https://b0x3n.github.io/public/images/scottishfinesoaps.jpg"
+            "logo": "/public/images/clients/scottishfinesoaps.jpg"
         },
         {
             "name": "Scottish Leather Group",
             "website": "https://www.scottishleathergroup.com//",
-            "logo": "https://b0x3n.github.io/public/images/scottishleathergroup.jpg"
+            "logo": "/public/images/clients/scottishleathergroup.jpg"
         },
         {
             "name": "Ichor Systems",
             "website": "https://www.ichorsystems.com/",
-            "logo": "https://b0x3n.github.io/public/images/semiscenic.jpg"
+            "logo": "/public/images/clients/semiscenic.jpg"
         },
         {
             "name": "Stirling Court Hotel",
             "website": "https://www.stirlingcourthotel.co.uk/",
-            "logo": "https://b0x3n.github.io/public/images/stirlingmanagement.jpg"
+            "logo": "/public/images/clients/stirlingmanagement.jpg"
         },
         {
             "name": "The Townhouse",
             "website": "",
-            "logo": "https://b0x3n.github.io/public/images/townhouse.jpg"
+            "logo": "/public/images/clients/townhouse.jpg"
         },
         {
             "name": "Walker Love",
             "website": "https://www.walkerlove.com/",
-            "logo": "https://b0x3n.github.io/public/images/walkerlove.jpg"
+            "logo": "/public/images/clients/walkerlove.jpg"
         },
         {
             "name": "The Winnock Hotel",
             "website": "https://www.winnockhotel.com/",
-            "logo": "https://b0x3n.github.io/public/images/winnockhotel.jpg"
+            "logo": "/public/images/clients/winnockhotel.jpg"
         }
         
-    ]
-}
+    ];
+    

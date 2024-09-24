@@ -17,6 +17,10 @@
         let __max_height = 0;
 
 
+///////////////////////////////////////////////////////////
+//  __set_max_height()                                   //
+///////////////////////////////////////////////////////////
+//
         const __set_max_height = () => {
 
             if ($('#contact_header').css('display') === 'none') {
@@ -33,6 +37,10 @@
         };
 
 
+///////////////////////////////////////////////////////////
+//  __build_quotes()                                     //
+///////////////////////////////////////////////////////////
+//
         const __build_quotes = () => {
 
             let __html_out = '';
@@ -69,6 +77,10 @@
         };
 
 
+///////////////////////////////////////////////////////////
+//  __show_quote()                                       //
+///////////////////////////////////////////////////////////
+//
         const __show_quote = () => {
 
             __set_max_height();
@@ -134,6 +146,34 @@
         };
 
 
+        const __populate_feedback_page = () => {
+
+            let __html_out = '';
+            let __index = 0;
+
+            FeedbackData.forEach(feedback => {
+
+                __html_out += `
+                    <div
+                        id="feedback_${__index++}"
+                        class="feedback_quote"
+                    >
+                        ${feedback['quote']}
+                    </div>
+                `;
+
+            });
+
+            setTimeout(() => {
+                $('#feedback_inner').append(__html_out);
+            }, 5000);
+        };
+
+
+///////////////////////////////////////////////////////////
+//  __initialise()                                       //
+///////////////////////////////////////////////////////////
+//
         const __initialise = () => {
 
             __build_quotes();
@@ -143,9 +183,9 @@
 
             __show_quote();
 
-            $(window).on('resize', () => {
-                __set_max_height();
-            });
+            window.__set_max_height = __set_max_height;
+
+            __populate_feedback_page();
 
         };
 

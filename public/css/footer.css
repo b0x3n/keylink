@@ -53,10 +53,12 @@
                     float: left;
                     text-decoration: none;
                     color: #FFF;
+                    text-shadow: 1px 1px 1px #000;
                     opacity: 0.01;
                     display: none;
                     font-family: Arial, Helvetica, sans-serif;
                     font-size: 12px;
+                    font-weight: bold;
                     top: 6px;
                     left: 6px;
                 }

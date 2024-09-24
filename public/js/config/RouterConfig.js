@@ -43,6 +43,17 @@
                 'link': 'Home',
                 'path': '/public/pages/home.html',
                 'title': 'Go to the Keylink Partnership home page'
+            },
+
+            'clients': {
+                'id': 'clients',
+                'path': '/public/pages/clients.html',
+                'title': 'Meet some of our clients!'
+            },
+            'feedback': {
+                'id': 'feedback',
+                'path': '/public/pages/feedback.html',
+                'title': 'Read some of the wonderful feedback from our Clients!'
             }
         },
 

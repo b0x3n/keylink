@@ -54,6 +54,10 @@
 //
         const __initialise = () => {
             
+            window.__set_image_height = false;
+            window.__refresh_display  = false;
+            window.__set_max_height  = false;
+
             $(window).on('load', () => {
 
                 __elasticate = Elasticate();
@@ -61,6 +65,24 @@
                 __feedback = Feedback();
 
                 __start_sprinklers();
+
+                if (window.__set_image_height)
+                    window.__set_image_height();
+                if (window.__refresh_display)
+                    window.__refresh_display();
+                if (window.__set_max_height)
+                    window.__set_max_height();
+
+            });
+
+            $(window).on('resize', () => {
+
+                if (window.__set_image_height)
+                    window.__set_image_height();
+                if (window.__refresh_display)
+                    window.__refresh_display();
+                if (window.__set_max_height)
+                    window.__set_max_height();
 
             });
 

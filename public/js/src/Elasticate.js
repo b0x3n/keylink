@@ -177,23 +177,49 @@
             __update_display();
 
             document.addEventListener('scroll', function() {
+                if (window.__set_image_height)
+                    window.__set_image_height();
                 __update_display();
             }, true);
 
-            document.addEventListener('resize', function() {
-                if (__elasticate_timer) {
-                    clearTimeout(__elasticate_timer);
-                    __elasticate_timer = false;
-                }
+            // $(window).on('resize', function() {
+            //     if (__elasticate_timer) {
+            //         clearTimeout(__elasticate_timer);
+            //         __elasticate_timer = false;
+            //     }
 
-                __elasticate_timer = setTimeout(() => {
-                    __elasticate_timer = false;
-                    $(document).scrollTop(0);
-                    __update_display();
-                }, 100);
-            }, true);
+            //     __elasticate_timer = setTimeout(() => {
+            //         __elasticate_timer = false;
+            //         $(document).scrollTop(0);
+            //         __update_display();
+            //     }, 100);
+                
+            //     window.__set_image_height();
+            // }, true);
+
+            window.__refresh_display = _refresh_display;
 
         }; 
+
+
+        const _refresh_display = () => {
+            
+            if (__elasticate_timer) {
+                clearTimeout(__elasticate_timer);
+                __elasticate_timer = false;
+            }
+
+            __elasticate_timer = setTimeout(() => {
+                __elasticate_timer = false;
+                $(document).scrollTop(0);
+                __update_display();
+            }, 100);
+            
+            if (window.__set_image_height)
+                window.__set_image_height();
+        
+        };
+
 
         __initialise();
 

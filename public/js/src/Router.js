@@ -7,6 +7,8 @@
 
     import { RouterConfig } from "./../config/RouterConfig.js";
 
+    import { Clients } from "./Clients.js";
+
 
     export const Router = () => {
         
@@ -16,6 +18,16 @@
         let __page = false;
 
         let __change_page = false;
+
+
+        const __refresh_all = () => {
+            if (window.__set_image_height)
+                window.__set_image_height();
+            if (window.__refresh_display)
+                window.__refresh_display();
+            if (window.__set_max_height)
+                window.__set_max_height();
+        };
 
 
 ///////////////////////////////////////////////////////////
@@ -69,6 +81,7 @@
                     RouterConfig['duration'],
                     RouterConfig['easing']
                 );
+                __refresh_all();
                 $(`#page_${__id}`).stop().animate({
                     'opacity': '0.01'
                 }, 500, "linear", function() {
@@ -78,6 +91,27 @@
                 });
             });
             
+
+            $(`.footer_link`).on('click', function(ev) {
+                ev.preventDefault();
+                const   __el_id = $(this).attr('id').replace('footer_link_', '');
+                if (__id === __el_id || __change_page)
+                    return;
+                __change_page = true;
+                $(`.nav_link`).stop().animate(
+                    RouterConfig['mouseout'],
+                    RouterConfig['duration'],
+                    RouterConfig['easing']
+                );
+                __refresh_all();
+                $(`#page_${__id}`).stop().animate({
+                    'opacity': '0.01'
+                }, 500, "linear", function() {
+                    $(`#page_${__id}`).css('display', 'none');
+                    __set_route(__el_id);
+                    __show_page();
+                });
+            });
 
             $(`.footer_link`).on('mouseover', function() {
                 $(this).stop().animate(
@@ -114,17 +148,19 @@
                 if (route === __route)
                     __objCss = window.__css_string(RouterConfig['selected']);
 
-                __html_out += `
-                    <a 
-                        id="${__prefix}${RouterConfig['routes'][route]['id']}"
-                        href="${RouterConfig['routes'][route]['path']}"
-                        class="${__class}"
-                        style="${__objCss}"
-                        title="${RouterConfig['routes'][route]['title']}"
-                    >
-                        ${RouterConfig['routes'][route]['link']}
-                    </a>
-                `;
+                if (RouterConfig['routes'][route].hasOwnProperty('link')) {
+                    __html_out += `
+                        <a 
+                            id="${__prefix}${RouterConfig['routes'][route]['id']}"
+                            href="${RouterConfig['routes'][route]['path']}"
+                            class="${__class}"
+                            style="${__objCss}"
+                            title="${RouterConfig['routes'][route]['title']}"
+                        >
+                            ${RouterConfig['routes'][route]['link']}
+                        </a>
+                    `;
+                }
 
                 $(`#content`).append(`<div id="page_${RouterConfig['routes'][route]['id']}" class="content_page"></div>`);
                 $(`#page_${RouterConfig['routes'][route]['id']}`).load(`${window.__url}${RouterConfig['routes'][route]['path']}`);
@@ -143,7 +179,6 @@
 //
         const __set_route = route => {
 
-            console.log(`New route |${route}|`)
             __route = route.toLowerCase();
 
             if (typeof __route === 'undefined' || __route === '') 
@@ -228,6 +263,32 @@
 
             __show_page();
             setTimeout(() => {
+                const   __clients = Clients();
+                $(`.content_link`).on('click', function(ev) {
+                    ev.preventDefault();
+                    const   __el_id = $(this).attr('id').replace('content_link_', '');
+                    if (__id === __el_id || __change_page)
+                        return;
+                    __change_page = true;
+                    $(`.nav_link`).stop().animate(
+                        RouterConfig['mouseout'],
+                        RouterConfig['duration'],
+                        RouterConfig['easing']
+                    );
+                    $(`#${RouterConfig['prefix'][0]}${__el_id}`).stop().animate(
+                        RouterConfig['mouseover'],
+                        RouterConfig['duration'],
+                        RouterConfig['easing']
+                    );
+                    __refresh_all();
+                    $(`#page_${__id}`).stop().animate({
+                        'opacity': '0.01'
+                    }, 500, "linear", function() {
+                        $(`#page_${__id}`).css('display', 'none');
+                        __set_route(__el_id);
+                        __show_page();
+                    });
+                });
                 __enable_icon_events();
             }, 500);
 
