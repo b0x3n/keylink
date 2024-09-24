@@ -55,7 +55,7 @@
                         "
                     >
                         <div id="quote_text_${el_no}" class="client_quote">
-                            &quot;${FeedbackData[el_no]['quote']}$quot;
+                            &quot;${FeedbackData[el_no]['quote']}&quot;
                         </div>
                         <div id="quote_client_${el_no}" class="client_info">
                             ${__client_info} 
@@ -94,42 +94,39 @@
 
             $(`#quote_${__current_entry}`).stop().animate({
                 'opacity': '0.99'
-            }, 1000, "linear", () => {
-                $(`#quote_text_${__current_entry}`).stop().animate({
-                    'opacity': '0.99',
-                    'top': '0px',
-                    'left': '0px'
-                }, 200, "linear", () => {
-                    $(`#quote_client_${__current_entry}`).stop().animate({
-                        'opacity': '0.99',
-                        'top': '1vw',
-                        'left': '0px'
-                    }, 200, "linear");
-                });
-            });
+            }, 1000, "linear")
+            $(`#quote_text_${__current_entry}`).stop().animate({
+                'opacity': '0.99',
+                'top': '0px',
+                'left': '0px'
+            }, 500, "linear")
+            $(`#quote_client_${__current_entry}`).stop().animate({
+                'opacity': '0.99',
+                'top': '1vw',
+                'margin-bottom': '1vw',
+                'left': '0px'
+            }, 500, "linear");
 
             setTimeout(() => {
-
                 $(`#quote_${__current_entry}`).stop().animate({
                     'opacity': '0.99'
-                }, 1000, "linear", () => {
-                    $(`#quote_client_${__current_entry}`).stop().animate({
-                        'opacity': '0.00',
-                        'top': '2vw',
-                        'left': '10px'
-                    }, 200, "linear", () => {
-                        $(`#quote_text_${__current_entry}`).stop().animate({
-                            'opacity': '0.01',
-                            'top': '1vw',
-                            'left': '10px'
-                        }, 200, "linear", () => {
-                            $(`#quote_${__current_entry}`).stop().animate({
-                                'opacity': '0.01'
-                            }, 1000, "linear", function() {
-                                $(this).css('display', 'none');
-                                __show_quote();
-                            });
-                        });
+                }, 1000, "linear");
+                $(`#quote_client_${__current_entry}`).stop().animate({
+                    'opacity': '0.00',
+                    'top': '2vw',
+                    'margin-bottom': '0vw',
+                    'left': '10px'
+                }, 200, "linear");
+                $(`#quote_text_${__current_entry}`).stop().animate({
+                    'opacity': '0.01',
+                    'top': '1vw',
+                    'left': '10px'
+                }, 200, "linear", () => {
+                    $(`#quote_${__current_entry}`).stop().animate({
+                        'opacity': '0.01'
+                    }, 1000, "linear", function() {
+                        $(this).css('display', 'none');
+                        __show_quote();
                     });
                 });
             }, FeedbackConfig['display_for'])

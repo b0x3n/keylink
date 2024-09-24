@@ -31,6 +31,47 @@
         let __footer_height;
 
 
+        const __pop_footer_elements = () => {
+
+            const   __display = $('.footer_link').css('display');
+
+            if (__display !== 'none')
+                return;
+
+            $(`.footer_link`).css({
+                'display': 'block',
+                'opacity': '0.01'
+            });
+
+            $(`.footer_link`).stop().animate({
+                'opacity': '0.99',
+                'top': '0px',
+                'left': '0px'
+            }, 200, "swing");
+
+        };
+
+
+        const __unpop_footer_elements = () => {
+
+            const   __display = $('.footer_link').css('display');
+
+            if (__display === 'none')
+                return;
+
+            $(`.footer_link`).stop().animate({
+                'opacity': '0.01',
+                'top': '6px',
+                'left': '6px'
+            }, 200, "swing", function() {
+                $(`.footer_link`).css({
+                    'display': 'none'
+                });
+            });
+
+        };
+
+
 ///////////////////////////////////////////////////////////
 //  __update_header()                                    //
 ///////////////////////////////////////////////////////////
@@ -88,6 +129,11 @@
                 __footer_height = (__footer_max - __remaining);
 
             $('footer').css('height', `${__footer_height}px`);
+
+            if (__footer_height >= __footer_max)
+                __pop_footer_elements();
+            else
+                __unpop_footer_elements();
 
         };
 

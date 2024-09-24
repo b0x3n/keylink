@@ -40,15 +40,29 @@
 
         .content_page {
             padding: 2px 6% 0px 6%;
-            width: 88%;
+            width: 68%;
         }
+
+            .content_inner {
+                margin-top: 2vh;
+            }
+
+                .content_inner h2 {
+                    font-size: 22px;
+                }   
+
+                .content_inner p {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+
 
         .content_quote {
             margin: 2vh 0px;
             right: 6%;
             width: 30%;
             height: auto;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         footer div {

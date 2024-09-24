@@ -10,13 +10,14 @@
         height: auto;
         min-height: 70vh;
         z-index: 3;
+        background-color: #DEDEFF;
     }
 
         .content_page {
             position: relative;
             float: left;
             clear: both;
-            width: 96%;
+            width: 100%;
             height: auto;
             min-height: 70vh;
             margin: 0px;
@@ -24,6 +25,43 @@
             opacity: 0.01;
             z-index: 700;
         }
+
+            .content_inner {
+                position: relative;
+                float: left;
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                padding: 2vh;
+                width: 100%;
+                height: auto;
+                background-color: #FFF;
+                border-radius: 12px;
+                box-shadow: 4px 4px 8px #AAA;
+            }
+
+            .content_inner h2 {
+                position: relative;
+                float: left;
+                width: 100%;
+                height: auto;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                color: #003466;
+                margin-bottom: 2vh;
+            }
+
+            .content_inner p {
+                position: relative;
+                float: left;
+                width: 100%;
+                height: auto;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                color: #003466;
+                margin: 1vh 0px;
+                padding: 0px 1vw;
+                line-height: 16px;
+            }
 
 
             .contact_page {
@@ -48,18 +86,20 @@
         background-color: #FFF;
         padding: 2vw;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 11px;
+        font-size: 12px;
         font-style: italic;
     }
 
         .client_quote {
             position: relative;
+            text-align: center;
             top: 1vw;
             left: 10px;
             opacity: 0.01;
             float: left;
             width: 100%;
             height: auto;
+            margin-bottom: 1vw;
         }
 
         .client_info {
@@ -67,6 +107,7 @@
             float: left;
             top: 2vw;
             left: 10px;
+            margin-bottom: 0vw;
             opacity: 0.01;
             width: 100%;
             height: auto;
@@ -74,3 +115,9 @@
             text-shadow: 1px 1px 1px #000;
             text-align: right;
         }
+
+            .title_span {
+                padding-top: -3px;
+                color: #3EB0FF;
+                font-weight: bold;
+            }

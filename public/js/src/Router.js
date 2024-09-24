@@ -77,6 +77,23 @@
                     __show_page();
                 });
             });
+            
+
+            $(`.footer_link`).on('mouseover', function() {
+                $(this).stop().animate(
+                    RouterConfig['mouseover'],
+                    RouterConfig['duration'],
+                    RouterConfig['easing']
+                );
+            });
+
+            $(`.footer_link`).on('mouseout', function() {
+                $(this).stop().animate(
+                    RouterConfig['mouseout'],
+                    RouterConfig['duration'],
+                    RouterConfig['easing']
+                );
+            });
 
         };
 
