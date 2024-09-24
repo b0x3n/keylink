@@ -164,9 +164,7 @@
 
             });
 
-            setTimeout(() => {
-                $('#feedback_inner').append(__html_out);
-            }, 5000);
+            $('#feedback_inner').append(__html_out);
         };
 
 
