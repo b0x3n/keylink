@@ -20,6 +20,12 @@
         ],
         
         'routes': {
+            'home': {
+                'id': 'home',
+                'link': 'Home',
+                'path': '/public/pages/home.html',
+                'title': 'Go to the Keylink Partnership home page'
+            },
 
             'clients': {
                 'id': 'clients',
@@ -49,14 +55,8 @@
                 'link': 'Services',
                 'path': '/public/pages/our_services.html',
                 'title': 'Services provided by Keylink Partnership'
-            },
-            'home': {
-                'id': 'home',
-                'link': 'Home',
-                'path': '/public/pages/home.html',
-                'title': 'Go to the Keylink Partnership home page'
             }
-            
+
         },
 
         'mouseover': {
