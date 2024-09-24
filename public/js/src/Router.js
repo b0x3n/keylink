@@ -8,6 +8,7 @@
     import { RouterConfig } from "./../config/RouterConfig.js";
 
     import { Clients } from "./Clients.js";
+    import { Feedback } from "./Feedback.js";
 
 
     export const Router = () => {
@@ -81,13 +82,13 @@
                     RouterConfig['duration'],
                     RouterConfig['easing']
                 );
-                __refresh_all();
                 $(`#page_${__id}`).stop().animate({
                     'opacity': '0.01'
                 }, 500, "linear", function() {
                     $(`#page_${__id}`).css('display', 'none');
                     __set_route(__el_id);
                     __show_page();
+                    __refresh_all();
                 });
             });
             
@@ -103,13 +104,13 @@
                     RouterConfig['duration'],
                     RouterConfig['easing']
                 );
-                __refresh_all();
                 $(`#page_${__id}`).stop().animate({
                     'opacity': '0.01'
                 }, 500, "linear", function() {
                     $(`#page_${__id}`).css('display', 'none');
                     __set_route(__el_id);
                     __show_page();
+                    __refresh_all();
                 });
             });
 
@@ -226,7 +227,6 @@
                     __el_id = __el_id.substring(0, 15);
                 else
                     __el_id = __el_id.substring(0, 17);
-                console.log(__el_id);
                 $(`#${__el_id}_background`).stop().animate({
                     'opacity': '0.90'
                 }, 500, "linear");
@@ -238,7 +238,6 @@
                     __el_id = __el_id.substring(0, 15);
                 else
                     __el_id = __el_id.substring(0, 17);
-                console.log(__el_id);
                 $(`#${__el_id}_background`).stop().animate({
                     'opacity': '0.01'
                 }, 500, "linear");
@@ -264,6 +263,7 @@
             __show_page();
             setTimeout(() => {
                 const   __clients = Clients();
+                const   __feedback = Feedback();
                 $(`.content_link`).on('click', function(ev) {
                     ev.preventDefault();
                     const   __el_id = $(this).attr('id').replace('content_link_', '');
@@ -280,13 +280,13 @@
                         RouterConfig['duration'],
                         RouterConfig['easing']
                     );
-                    __refresh_all();
                     $(`#page_${__id}`).stop().animate({
                         'opacity': '0.01'
                     }, 500, "linear", function() {
                         $(`#page_${__id}`).css('display', 'none');
                         __set_route(__el_id);
                         __show_page();
+                        __refresh_all();
                     });
                 });
                 __enable_icon_events();

@@ -94,6 +94,12 @@
             grid-template-rows: repeat(5, auto);
         }
 
+        .feedback_quote,
+        .feedback_info {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
         /* .client_wrapper {
             width: 98%;
             height: 96px;

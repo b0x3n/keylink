@@ -152,19 +152,31 @@
             let __index = 0;
 
             FeedbackData.forEach(feedback => {
+                let __client_info = FeedbackData[__index]['client_name'];
+
+                if (FeedbackData[__index]['client_title'] !== '')
+                    __client_info += `, ${FeedbackData[__index]['client_title']}`;
+
+                __client_info += `, ${FeedbackData[__index]['client_company']}`;
 
                 __html_out += `
                     <div
-                        id="feedback_${__index++}"
-                        class="feedback_quote"
+                        id="feedback_${__index}"
+                        class="feedback_wrapper"
                     >
-                        ${feedback['quote']}
+                        <div id="feedback_quote_${__index}" class="feedback_quote">
+                            &quot;${feedback['quote']}&quot;
+                        </div>
+                        <div id="feedback_info_${__index++}" class="feedback_info">
+                            &quot;${__client_info}&quot;
+                        </div>
                     </div>
-                `;
+                    `;
 
             });
 
-            $('#feedback_inner').append(__html_out);
+            $('.feedback').append(__html_out);
+            
         };
 
 
