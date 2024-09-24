@@ -27,6 +27,6 @@
             'easing': 'linear'
         },
 
-        'display_for': 3000
+        'display_for': 15000
 
     };
