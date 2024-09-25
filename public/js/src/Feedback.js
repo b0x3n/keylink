@@ -168,7 +168,7 @@
                             &quot;${feedback['quote']}&quot;
                         </div>
                         <div id="feedback_info_${__index++}" class="feedback_info">
-                            &quot;${__client_info}&quot;
+                            ${__client_info}
                         </div>
                     </div>
                     `;
